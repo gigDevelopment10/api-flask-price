@@ -13,6 +13,10 @@ CORS(app)
 # creating an API object
 api = Api(app)
 
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 #prediction api call
 class prediction(Resource):
     def get(self,budget):
